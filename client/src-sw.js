@@ -27,4 +27,17 @@ warmStrategyCache({
     strategy: pageCache,
   });
 
-  
+// asset caching
+registerRoute(
+    ({ request }) => request.destination === 'image',
+    new CacheFirst({
+      // Identification stringof the cache storage.
+      cacheName: 'asset-cache',
+      plugins: [
+      // This plugin will cache responses with headers, maximum time of 30 days
+        new CacheableResponsePlugin({
+          statuses: [0, 200],
+        }),
+      ],
+    })
+  );
