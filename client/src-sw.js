@@ -19,3 +19,10 @@ const pageCache = new CacheFirst({
     }),
   ],
 });
+
+registerRoute(({ request }) => request.mode === "navigate", pageCache);
+
+warmStrategyCache({
+    urls: ["/index.html", "/"],
+    strategy: pageCache,
+  });
