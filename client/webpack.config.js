@@ -14,16 +14,17 @@ module.exports = () => {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
-
-    // TODO: Add the correct output
-    output: {
-      
-    },
-
-    // TODO: Add the correct plugins
     plugins: [
-     
-    ],
+      new HtmlWebpackPlugin({
+        template: "./index.html",
+        title: "JATE",
+      }),
+      // injects our custom service work from src-sw.js
+      new InjectManifest({
+        swSrc: "./src-sw.js",
+        swDest: "src-sw.js",
+      }),
+
 
     // TODO: Add the correct modules
     module: {
