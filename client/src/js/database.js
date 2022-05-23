@@ -1,7 +1,5 @@
-// TODO: Install the following package:
 import { openDB } from 'idb';
 
-// TODO: Complete the initDb() function below:
 const initdb = async () =>
   openDB('jate', 1, {
     upgrade(db) {
@@ -14,20 +12,10 @@ const initdb = async () =>
     },
   });
 
+// TODO: Add logic to a method that accepts some content and adds it to the database
+export const putDb = async (content) => console.error('putDb not implemented');
 
-// TODO: Complete the postDb() function below:
-export const postDb = async (name, home, cell, email)  => {
- 
-};
-
-// TODO: Complete the getDb() function below:
-export const getDb = async () => {
-  
-};
-
-// TODO: Complete the deleteDb() function below:
-export const deleteDb = async (id) => {
-  
-};
+// TODO: Add logic for a method that gets all the content from the database
+export const getDb = async () => console.error('getDb not implemented');
 
 initdb();
