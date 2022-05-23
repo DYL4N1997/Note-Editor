@@ -16,4 +16,4 @@ The user can run the app in the browser or install locally for offline use. It f
 
 # Deployment
 
-The application is deployed on Heroku and can be accessed via this link - 
+The application is deployed on Heroku and can be accessed via this link - https://n0te-editor.herokuapp.com/ 
